@@ -1,0 +1,207 @@
+/* General body settings */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #000046, #1cb5e0);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Background image with parallax effect */
+body::before {
+  content: "";
+  background: url('../src/assets/5652006.webp') no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: brightness(0.4);
+}
+
+/* Global container for pages */
+.app {
+  text-align: center;
+  padding: 50px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Page content animations */
+.page {
+  padding: 50px 20px;
+  animation: slideUp 1.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Advanced typography for headings */
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 10px #00c6ff, 0 0 20px #00c6ff, 0 0 30px #0072ff;
+  }
+  to {
+    text-shadow: 0 0 20px #0072ff, 0 0 30px #00c6ff, 0 0 40px #0072ff;
+  }
+}
+
+/* Advanced card design for sections */
+.page {
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.page:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover and glow effects for navigation links */
+a {
+  text-decoration: none;
+  color: #1cb5e0;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: 2px solid #1cb5e0;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  background-color: #1cb5e0;
+  color: #fff;
+  box-shadow: 0 5px 20px rgba(0, 188, 255, 0.6);
+}
+
+/* Navigation bar styling with hover effects */
+.header {
+  background-color: rgba(0, 0, 70, 0.8);
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+}
+
+.header nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  gap: 20px;
+}
+
+.header nav ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.header nav ul li a {
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.header nav ul li a:hover {
+  background-color: #1cb5e0;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Parallax section for content */
+.parallax {
+  background: url('../src/assets/5652006.webp') no-repeat center center fixed;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: brightness(0.7);
+}
+
+.parallax h1 {
+  color: white;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  animation: fadeInText 2s ease-in-out;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer with gradient effect and hover */
+.footer {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  padding: 30px 0;
+  color: white;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  transition: letter-spacing 0.3s ease;
+}
+
+.footer p:hover {
+  letter-spacing: 2px;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .page {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+}
