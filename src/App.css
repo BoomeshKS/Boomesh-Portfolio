@@ -1,8 +1,10 @@
-/* General body settings */
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Lugrasimo", cursive;
   background: linear-gradient(to right, #000046, #1cb5e0);
   color: #fff;
   overflow-x: hidden;
